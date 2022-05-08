@@ -116,6 +116,11 @@ func (ap AbsolutePath) RelativePathString(path string) (string, error) {
 	return filepath.Rel(ap.asString(), path)
 }
 
+// Remove implements os.Remove for an absolute path.
+func (ap AbsolutePath) Remove() error {
+	return os.Remove(ap.asString())
+}
+
 // EnsureDirFS ensures that the directory containing the given filename is created
 func EnsureDirFS(fs afero.Fs, filename AbsolutePath) error {
 	dir := filename.Dir()
@@ -148,6 +153,12 @@ func ReadFile(fs afero.Fs, filename AbsolutePath) ([]byte, error) {
 // RemoveFile removes the file at the given path
 func RemoveFile(fs afero.Fs, filename AbsolutePath) error {
 	return fs.Remove(filename.asString())
+}
+
+// GetTempDir returns the absolute path of a directory with the given name
+// under the system's default temp directory location
+func GetTempDir(subDir string) AbsolutePath {
+	return AbsolutePath(os.TempDir()).Join(subDir)
 }
 
 type pathValue struct {
