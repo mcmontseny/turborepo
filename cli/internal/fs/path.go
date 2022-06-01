@@ -121,6 +121,11 @@ func (ap AbsolutePath) Remove() error {
 	return os.Remove(ap.asString())
 }
 
+// Base implements filepath.Base for an absolute path
+func (ap AbsolutePath) Base() string {
+	return filepath.Base(ap.asString())
+}
+
 // EnsureDirFS ensures that the directory containing the given filename is created
 func EnsureDirFS(fs afero.Fs, filename AbsolutePath) error {
 	dir := filename.Dir()
