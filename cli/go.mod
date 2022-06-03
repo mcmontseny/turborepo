@@ -13,6 +13,7 @@ require (
 	github.com/gobwas/glob v0.2.3
 	github.com/google/chrometracing v0.0.0-20210413150014-55fded0163e7
 	github.com/google/uuid v1.3.0
+	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/hashicorp/go-gatedio v0.5.0
 	github.com/hashicorp/go-hclog v1.1.0
 	github.com/hashicorp/go-retryablehttp v0.6.8
@@ -28,6 +29,7 @@ require (
 	github.com/sabhiram/go-gitignore v0.0.0-20201211210132-54b8a0bf510f
 	github.com/spf13/afero v1.8.2
 	github.com/spf13/cobra v1.3.0
+	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.7.0
 	github.com/yosuke-furukawa/json5 v0.1.1
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
@@ -60,7 +62,6 @@ require (
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/posener/complete v1.2.3 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
 	golang.org/x/crypto v0.0.0-20211108221036-ceb1ce70b4fa // indirect
 	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d // indirect
 	golang.org/x/sys v0.0.0-20220412211240-33da011f77ad // indirect
